@@ -1,0 +1,44 @@
+<section class="py-5 header text-center">
+    <div class="container py-5 text-white">
+        <header class="py-5">
+            <h1 class="display-4">Ghar Pe</h1>
+            <p class="font-italic mb-1">The Grocery Store you need, for all your needs</p><br>
+            <button class="btn btn-transparent-white">
+                <a class="text-white" href="#">
+                    Shop Now
+                </a>
+            </button>
+
+        </header>
+    </div>
+</section><br><br>
+<!---thumbnails--->
+<div class="container">
+
+    {{# each products }}
+    <div class="row">
+        {{# each this }}
+        <div class="col-md-4">
+            <figure class="card card-product">
+                <div class="img-wrap"><img
+                        src="{{this.imagePath}}"></div>
+                <figcaption class="info-wrap">
+                    <h4 class="title">{{this.title}}</h4>
+                    <p class="desc">Some small description goes here</p>
+                    <div class="rating-wrap">
+                        
+                    </div> <!-- rating-wrap.// -->
+                </figcaption>
+                <div class="bottom-wrap">
+                    <a href="" class="btn btn-sm btn-primary float-right">Add to Cart</a>
+                    <div class="price-wrap h5">
+                        <span class="price-new">₹{{this.price}}</span>
+                    </div> <!-- price-wrap.// -->
+                </div> <!-- bottom-wrap.// -->
+            </figure>
+        </div> <!-- col // -->
+        {{/each}}
+    </div>
+    {{/each}}
+
+</div>
