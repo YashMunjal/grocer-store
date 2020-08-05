@@ -6,7 +6,9 @@ var logger = require('morgan');
 var expressHbs=require('express-handlebars');
 var indexRouter = require('./routes/index');
 var mongoose=require('mongoose');
-
+var session=require('express-session');
+var passport=require('passport');
+var flash=require('connect-flash');
 var app = express();
 
 
@@ -20,6 +22,7 @@ mongoose.connect('mongodb+srv://yashmunjal:bosWrODJvytignp7@cluster0.6urhw.mongo
     console.log("Mongo Connected");
 })
 
+require('./config/passport');
 
 
 // view engine setup
@@ -29,7 +32,14 @@ app.engine('.hbs',expressHbs({
 }));
 app.set('view engine', '.hbs');
 
+//sessions 
 
+app.use(session({secret:'CookieMonsterAreReal',resave:false,saveUninitialized:false}))
+
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+//sessions ends
 
 
 app.use(logger('dev'));
