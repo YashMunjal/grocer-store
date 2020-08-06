@@ -1,11 +1,12 @@
-
+html{
+  scroll-behavior: smooth;
+}
 .text-small {
   font-size: 0.9rem !important;
 }
 
 .header {
-  background-color: #00d2ff;
-  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 100%);
+  background:  linear-gradient(#0f010bbd, #030a2986),url("/images/grocery-back.jpg");
 }
 .btn-transparent-white{
   border:1px solid white;
@@ -50,3 +51,4 @@ footer {
 footer a {
   color: #f8f9fa!important
 }
+
