@@ -16,22 +16,22 @@
 <div class="container" id="main-container">
     <h1>Get the Best Deals</h1>
     <hr><br>
+
     {{# each products }}
     <div class="row">
         {{# each this }}
         <div class="col-md-4">
             <figure class="card card-product">
-                <div class="img-wrap"><img
-                        src="{{this.imagePath}}" style="height:200px;"></div>
+                <div class="img-wrap"><img src="{{this.imagePath}}" style="height:200px;"></div>
                 <figcaption class="info-wrap">
                     <h4 class="title">{{this.title}}</h4>
                     <p class="desc">{{this.description}}</p>
                     <div class="rating-wrap">
-                        
+
                     </div> <!-- rating-wrap.// -->
                 </figcaption>
                 <div class="bottom-wrap">
-                    <a href="/add-to-cart/{{this._id}}" class="btn btn-sm btn-success float-right">Add to Cart</a>
+                    <a href="/add-to-cart/{{this._id}}" class="btn btn-sm btn-success float-right" onclick="successFunc()">Add to Cart</a>
                     <div class="price-wrap h5">
                         <span class="price-new">₹{{this.price}}</span>
                     </div> <!-- price-wrap.// -->
@@ -43,3 +43,8 @@
     {{/each}}
 
 </div>
+<script>
+    function successFunc(){
+        Swal.fire('Added', 'To the cart','success');
+    }
+</script>

@@ -12,6 +12,9 @@ html{
   border:1px solid white;
   border-radius: 15px;
 }
+.card{
+  height:400px;
+}
 .card-product .img-wrap {
   border-radius: 3px 3px 0 0;
   overflow: hidden;
@@ -51,4 +54,6 @@ footer {
 footer a {
   color: #f8f9fa!important
 }
+
+/*---sidenav-------*/
 

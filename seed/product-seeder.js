@@ -24,7 +24,7 @@ mockData.forEach((i)=>{
     title: i.title,
     description: i.description,
     price: i.price,
-    category:"Grocery"
+    category:i.category
   }));
 })
 
