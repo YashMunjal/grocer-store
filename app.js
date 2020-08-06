@@ -16,6 +16,8 @@ var validator=require('express-validator');
 var app = express();
 
 
+
+
 //DB setup
 mongoose.connect('mongodb+srv://yashmunjal:bosWrODJvytignp7@cluster0.6urhw.mongodb.net/shopping?retryWrites=true&w=majority',{
   useNewUrlParser: true,
@@ -54,6 +56,11 @@ app.use(passport.session());
 //sessions ends
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req,res,next){
+  res.locals.login=req.isAuthenticated();
+  next();
+})
+
 app.use('/user',userRoutes);
 app.use('/', indexRouter);
 
@@ -72,4 +79,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-module.exports=app;
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
