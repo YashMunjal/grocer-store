@@ -1,8 +1,14 @@
 <!-- Default form login -->
 <form class="text-center border border-light p-5" action="/user/signup" method="POST">
 
-    <p class="h4 mb-4">Sign in</p>
-
+    <p class="h4 mb-4">Sign Up</p>
+    {{#if hasErrors}}
+        <div class="alert alert-danger">
+            {{#each messages }}
+                <p>{{this}}</p>
+            {{/each}}
+        </div>
+    {{/if}}
     <!-- Email -->
     <input type="email" id="email" class="form-control mb-4" name="email" placeholder="E-mail">
 

@@ -1,6 +1,8 @@
 var Product = require("../models/product");
 var mongoose=require('mongoose');
 const { exists } = require("../models/product");
+var mockData=require('./mock-product.json');
+
 
 mongoose.connect('mongodb+srv://yashmunjal:bosWrODJvytignp7@cluster0.6urhw.mongodb.net/shopping?retryWrites=true&w=majority',{
   useNewUrlParser: true,
@@ -11,23 +13,21 @@ mongoose.connect('mongodb+srv://yashmunjal:bosWrODJvytignp7@cluster0.6urhw.mongo
     console.log("Mongo Connected");
 })
 
+//console.log(mockData[0].title);
 
-var products = [
+var products = [];
+mockData.forEach((i)=>{
+  products.push(
   new Product({
     imagePath:
-      "https://i.pinimg.com/originals/57/a2/8a/57a28a94f89428071426b15ae0e08c53.png",
-    title: "Oranch Dressing",
-    description: "Mayo Dressing by Oranch",
-    price: "200",
-  }),
-  new Product({
-    imagePath:
-      "https://i.pinimg.com/originals/57/a2/8a/57a28a94f89428071426b15ae0e08c53.png",
-    title: "Oranch Dressing",
-    description: "Mayo Dressing by Oranch",
-    price: "200",
-  })
-];
+      i.imagePath,
+    title: i.title,
+    description: i.description,
+    price: i.price,
+    category:"Grocery"
+  }));
+})
+
 
 var done=0;
 for(var i=0;i<products.length;i++){
