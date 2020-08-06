@@ -28,13 +28,6 @@
     "category": "snacks and dressings"
   },
   {
-    "imagePath": "https://i.pinimg.com/originals/ef/a9/28/efa928b037adc9073815eac575d3e877.png",
-    "title": "Sir Kensington's Mayonnaise",
-    "description": "The Real Mayonnaise Experience from the masters",
-    "price": "150",
-    "category": "snacks and dressings"
-  },
-  {
     "imagePath": "https://www.bakersplus.com/content/v2/binary/image/department/grocery/navicon_condiments-sauces-desktop-1576165924487.png",
     "title": "Heinz Red Sauce",
     "description": "The world famous Heiz, with their world famous red tomato ketchup",
@@ -54,5 +47,42 @@
     "description": "Strawberries- 300gms",
     "price": "75",
     "category": "raw"
+  },
+  {
+    "imagePath": "https://i.pinimg.com/originals/2a/b6/7c/2ab67c97774d5f9adec001aa17db98bb.png",
+    "title": "Rana Basils",
+    "description": "Basils packages by Rana 200gms",
+    "price": "40",
+    "category": "raw"
+  },
+  {
+    "imagePath": "https://haqdepartmental.com/wp-content/uploads/2018/06/lays.jpg",
+    "title": "Lays Classic",
+    "description": "Lays Classic Salted- Big Pack",
+    "price": "40",
+    "category": "raw"
+  },
+  {
+    "imagePath": "https://haqdepartmental.com/wp-content/uploads/2018/06/lays.jpg",
+    "title": "Lays Classic",
+    "description": "Lays Classic Salted- Big Pack",
+    "price": "40",
+    "category": "raw"
+  },
+  {
+    "imagePath": "https://assets.gopaisa.com/unsafe/0x0/https://gpcdn.ams3.cdn.digitaloceanspaces.com/deals/flipkart-grocery-breakfast-items-corn-flakes-chocos-offer-discount-1529314833.jpg",
+    "title": "Kellogs Corn flakes",
+    "description": "Kellogs Corn Flakes - Real Honey- Box Pack",
+    "price": "340",
+    "category": "raw"
+  },
+  {
+    "imagePath": "https://www.bakersplus.com/content/v2/binary/image/department/pantry_coke-desktop-1582810517480.png",
+    "title": "Coca Cola 2L",
+    "description": "Coca Cola- 2 liters",
+    "price": "120",
+    "category": "bevrage"
   }
+  
+  
 ]
